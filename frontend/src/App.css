@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+  background-color: #121212; /* Dark background for the whole app */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content towards the start of the main axis */
+  align-items: center; /* Center items on the cross-axis */
+}
+
+.App-header {
+  color: white;
+  width: 50%; /* Control width of the header */
+  margin-top: 5vh; /* Increase margin top to push the header up */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(12px + 2vmin); /* Increase the font size a bit if needed */
+}
+
+.character-count {
+  color: #bbb;
+  font-size: 12px;
+  text-align: right;
+  width: 100%;
+  margin-top: 5px; /* Adjust spacing between input/textarea and character count */
+}
+
+
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px; /* Ensures text inside input and textarea is of the same size */
+  font-family: Arial, sans-serif; /* Optional: Ensures the font family is consistent */
+}
+
+
+
+textarea {
+  height: 70%;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  resize: none; /* Disables resizing */
+}
+
+/* Style placeholders */
+input::placeholder, textarea::placeholder {
+  color: #bbb; /* Lighter grey color for placeholders */
+  font-size: 16px; /* Same font size as the input text */
+  font-family: Arial, sans-serif; /* Ensuring the font family is the same */
+  opacity: 1; /* Make sure it's fully visible */
+}
+
+button {
+  width: 200px; /* Wider button */
+  padding: 15px;
+  margin-top: 20px; /* More space above the button */
+  background-color:red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Larger font size for the button */
+}
+
+button:hover {
+  background-color:#fd2f2f; /* Slightly darker on hover */
+}

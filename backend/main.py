@@ -1,7 +1,7 @@
 from crewai import Crew, Process
 
-from backend.agents import YoutubeAutomationAgents
-from backend.tasks import YoutubeAutomationTasks
+from agents import YoutubeAutomationAgents
+from tasks import YoutubeAutomationTasks
 from langchain_openai import ChatOpenAI
 from tools.youtube_video_details_tool import YoutubeVideoDetailsTool
 from tools.youtube_video_search_tool import YoutubeVideoSearchTool
