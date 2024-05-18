@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException  # Importing FastAPI and HTTPException for handling HTTP errors.
 from pydantic import BaseModel  # Import BaseModel from Pydantic to create data models.
+from fastapi.responses import FileResponse
 from main import startProgram
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -37,10 +38,17 @@ async def create_video(video_request: VideoRequest):  # Define an asynchronous r
     try:
         # Call the function from main.py with the provided topic and details
         results = startProgram(video_request.topic, video_request.details)
+        # results = "STARTED"
         return {"message": "Video creation process started", "results": results}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-@app.get("/")  # Decorator to create a route that listens for GET requests at the root /
-def read_root():  # Define a simple function to respond to root requests.
-    return {"Hello": "World"}  # Returns a simple JSON response to indicate that the API is running.
+@app.get("/get_video_creation_report/")
+async def get_video_creation_report():
+    file_path = "output/YouTube_Video_Creation_Report.txt"
+    try:
+        return FileResponse(file_path, media_type='text/plain', filename="YouTube_Video_Creation_Report.txt")
+        # return ("REPORT HERE")
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Report not found")
+    

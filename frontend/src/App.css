@@ -1,22 +1,41 @@
-.App {
-  text-align: center;
-  background-color: #121212; /* Dark background for the whole app */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align content towards the start of the main axis */
-  align-items: center; /* Center items on the cross-axis */
+
+.label-report {
+  display: block;
+  margin-top: 20px; 
+}
+
+.report-textarea {
+  width: 100%;  
+  height: 250px; 
+  margin-top: 20px;
 }
 
 .App-header {
-  color: white;
-  width: 50%; /* Control width of the header */
-  margin-top: 5vh; /* Increase margin top to push the header up */
+  font-size: xx-large;
+  width: 100%;
+  max-width: 600px;
   padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(12px + 2vmin); /* Increase the font size a bit if needed */
+  padding: 20px;
 }
 
 .character-count {
@@ -30,7 +49,8 @@
 
 
 input {
-  width: 80%;
+  align-items: center;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   background-color: #333;
@@ -44,8 +64,8 @@ input {
 
 
 textarea {
-  height: 70%;
-  width: 80%;
+  height: 100px;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   background-color: #333;

@@ -27,7 +27,6 @@ def startProgram(topic, details):
         youtube_video_search_tool, youtube_video_details_tool)
     title_creator = agents.title_creator()
     description_creator = agents.description_creator()
-    # email_creator = agents.email_creator()
 
     # TODO: UPDATE THE VIDEO DETAILS
 

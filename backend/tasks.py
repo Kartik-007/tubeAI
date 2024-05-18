@@ -22,7 +22,7 @@ class YoutubeAutomationTasks():
                 - It is important to note that the example report only contains 3 potential high CTRO titles,
                      but the final report should contain 10 titles.               
                 
-                Example Report:
+                Example Report(Only contains 2 videos but the actual report much have 15):
                 # YouTube Competition Research Table:
                 - Video 1:
                     - Title: "How to Make a YouTube Video"
@@ -41,6 +41,7 @@ class YoutubeAutomationTasks():
                 # Potential High CTRO Titles:
                 - How to Make a YouTube Video in 2024
                 - How to Make a YouTube Video for Beginners
+                - Why is AI so powerful
                 [THE REST OF THE POTENTIAL HIGH CTRO TITLES GO HERE]
                                     
                 # YouTube Video Description:
